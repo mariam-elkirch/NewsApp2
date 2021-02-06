@@ -8,6 +8,6 @@ import retrofit2.Retrofit
 import retrofit2.http.GET
 import retrofit2.http.Query
 interface ApiRequests {
-    @GET("top-headlines?country=us&apiKey=24a928ae8e564ad885294b3611404a5e")
+    @GET("top-headlines?country=us&apiKey=2b73148720ee4a6c98910ea36c3b11d3")
      fun getNews():Call<NewsJason>
 }

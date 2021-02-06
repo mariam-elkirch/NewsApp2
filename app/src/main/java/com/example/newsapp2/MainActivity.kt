@@ -1,11 +1,12 @@
 package com.example.newsapp2
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import api.Article
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-       recyclerView.layoutManager=linearLayoutManager
+        recyclerView.layoutManager=linearLayoutManager
         adapter = NewsRecyclerAdapter(null)
         recyclerView.adapter = adapter
         getCurrentData()
@@ -56,16 +57,34 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
 
                     val data = response.body()!!
-                   // Log.d("mydataaaaaaaaa", data.toString())
+                    // Log.d("mydataaaaaaaaa", data.toString())
                     val newsList: List<Article> = data.articles
-                  //  Log.d("mydataaaaaaaaa", newsList.toString())
+                    //  Log.d("mydataaaaaaaaa", newsList.toString())
                     withContext(Dispatchers.Main) {
-                       adapter.changeData(newsList)
+                        adapter.changeData(newsList)
 
-                       // adapter?.changeData(newsList)
+                        // adapter?.changeData(newsList)
                         Log.d("data", newsList.toString())
                         Log.d("adapterdata", adapter.toString())
+                        adapter.setOnItemClickListener(object :NewsRecyclerAdapter.ClickListener {
 
+                          override  fun onItemClick(v: View, position: Int) {
+
+                                Log.d("myclick", "onItemClick ${position}")
+
+
+                            //  val intent = Intent(this, Details::class.java)
+                            //  intent.putExtra("keyString", "Androidly String data")
+
+                              /*  Toast.makeText(
+                                    this@MainActivity,
+                                    "Clicked: ${adapter.getItem(position)}",
+                                    Toast.LENGTH_SHORT
+                                ).show()*/
+
+                            }
+
+                        })
                     }
 
                 }

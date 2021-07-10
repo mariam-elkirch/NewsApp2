@@ -3,5 +3,7 @@ News is important for a number of reasons within a society. Mainly to inform the
 This app is help us know the news.
 
 # ScrenShots
+![news1](https://user-images.githubusercontent.com/45265655/125171488-ca571680-e1b4-11eb-9cc7-80e31a11c717.jpg)
+![news2](https://user-images.githubusercontent.com/45265655/125171507-e22e9a80-e1b4-11eb-8e94-4648ae402a10.jpg)
 
 

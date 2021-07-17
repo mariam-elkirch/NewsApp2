@@ -12,8 +12,8 @@ This app is help us know the news.
 * <a href="https://github.com/bumptech/glide">Glide</a> (image loading)
 
 # API Key
-1- Getting the API Key from the website: * <a href="https://newsapi.org/docs/get-started" target="_blank">News API</a> 
-2. Changing the API key used in the project:
-Open the “ApiRequests” file in the project folder and here is where to change the current API Key with the new one which you have just got.
+1- Getting the API Key from the website:  <a href="https://newsapi.org/docs/get-started" target="_blank">News API</a>  <br />
+2. Changing the API key used in the project: <br />
+Open the “ApiRequests” file in the project folder and here is where to change the current API Key with the new one which you have just got. <br />
 ![image](https://user-images.githubusercontent.com/45265655/125989427-2493f981-4391-4b7b-b52c-996e78d3ce70.png)
 
